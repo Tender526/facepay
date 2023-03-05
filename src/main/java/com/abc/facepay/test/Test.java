@@ -10,5 +10,7 @@ public class Test {
         System.out.println("ceshi cflict local");
         System.out.println("ceshi cflict");
         System.out.println("ceshi dev");
+
+        System.out.println("master baranches conflict");
     }
 }
