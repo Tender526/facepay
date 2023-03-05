@@ -8,5 +8,6 @@ public class Test {
         System.out.println("ceshi commit5");
         System.out.println("ceshi push");
         System.out.println("ceshi cflict local");
+        System.out.println("ceshi cflict");
     }
 }
