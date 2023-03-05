@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>用户列表</title>
+</head>
+<body>
+<a href="/user/toAddPage">新增用户</a>
+<br/>
+<table border="1" cellpadding="0" cellspacing="0">
+    <tr>
+        <th>用户名</th>
+        <th>电话号码</th>
+        <th>昵称</th>
+        <th>性别</th>
+        <th>生日</th>
+        <th>邮箱</th>
+    </tr>
+    <tr th:each="tuser,status:${userlist}">
+        <td th:text="${tuser.username}"></td>
+        <td th:text="${tuser.telephone}"></td>
+        <td th:text="${tuser.nickname}"></td>
+        <td th:text="${tuser.sex}"></td>
+        <td th:text="${tuser.birthday}"></td>
+        <td th:text="${tuser.email}"></td>
+        <td>
+
+            <a th:href="'/user/delete?uid='+${tuser.uid}">删除用户</a>
+            <a th:href="'/user/toEditPage?uid='+${tuser.uid}">修改用户</a>
+        </td>
+
+
+
+    </tr>
+
+
+</table>
+
+
+
+</body>
+</html>

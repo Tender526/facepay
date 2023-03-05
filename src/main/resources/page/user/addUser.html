@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>新增用户</title>
+</head>
+<body>
+<form method="post" action="/user/add">
+    用户名<input type="text" name="username"><br/>
+    密码<input type="text" name="password"><br/>
+    电话号码<input type="text" name="telephone"><br/>
+    昵称<input type="text" name="nickname"><br/>
+    性别<input type="text" name="sex" value="男"><br/>
+    生日<input type="text" name="birthday" value="20010101"><br/>
+    邮箱<input type="text" name="email"><br/>
+    头像<input type="text" name="pic"><br/>
+
+
+
+
+    <button type="submit">添加用户</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.abc.facepay.mapper.UserMapper">
+    <!-- 添加账户 -->
+    <update id="insertUser" parameterType="user">
+        insert into tab_user
+        (uid,username,password,telephone,nickname,sex,birthday,email,pic,face_token)
+        values
+        (#{uid},#{username},#{password},#{telephone},#{nickname},#{sex}, #{birthday},#{email},#{pic},#{face_token})
+
+    </update>
+
+    <select id="findAllUser" resultType="user">
+        select * from tab_user;
+
+    </select>
+
+    <update id="deleteByIds" parameterType="string" >
+        delete from tab_user where uid = #{value}
+
+    </update>
+
+
+
+    <select id="findById" parameterType="user" resultType="user">
+        select * from tab_user where uid = #{value}
+    </select>
+
+
+    <update id="updateUserById" parameterType="user" >
+        update tab_user
+        set username=#{username},telephone=#{telephone}
+        where uid = #{uid}
+    </update>
+</mapper>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>修改用户</title>
+</head>
+<body>
+<form method="post" action="/user/update">
+    用户名<input type="text" name="username" th:value="${user.username}"><br/>
+    密码<input type="text" name="password" th:value="${user.password}"><br/>
+    电话号码<input type="text" name="telephone" th:value="${user.telephone}"><br/>
+    昵称<input type="text" name="nickname" th:value="${user.nickname}"><br/>
+    性别<input type="text" name="sex" th:value="${user.sex}"><br/>
+    生日<input type="text" name="birthday" th:value="${user.birthday}"><br/>
+    邮箱<input type="text" name="email" th:value="${user.email}"><br/>
+    头像<input type="text" name="pic" th:value="${user.pic}"><br/>
+
+    <input type="text" hidden="hidden" name="uid" th:value="${user.uid}"><br/>
+
+
+
+
+    <button type="submit">修改用户</button>
+</form>
+</body>
+</html>
