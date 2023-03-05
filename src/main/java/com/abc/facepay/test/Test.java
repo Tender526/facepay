@@ -12,5 +12,9 @@ public class Test {
         System.out.println("ceshi dev");
 
         System.out.println("master baranches conflict");
+        System.out.println("master branches conflict");
+        System.out.println("dev branches conflict");
+
+        System.out.println("dev branches conflict111");
     }
 }
